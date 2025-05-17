@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
+import { use } from "react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { BlogContent } from "@/components/blog/blog-content"
@@ -12,6 +13,7 @@ import { BlogRelated } from "@/components/blog/blog-related"
 import { Button } from "@/components/ui/button"
 import { Facebook, Twitter, Linkedin, Copy, Bookmark, ThumbsUp } from "lucide-react"
 import { useEffect, useState } from "react"
+import React from "react"
 
 // Animation variants
 const fadeIn = {
@@ -71,9 +73,10 @@ const getBlogPost = (slug: string) => {
   }
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const [isLoaded, setIsLoaded] = useState(false)
-  const post = getBlogPost(params.slug)
+  const unwrappedParams = React.use(params)
+  const post = getBlogPost(unwrappedParams.slug)
 
   // Simulate loading
   useEffect(() => {
