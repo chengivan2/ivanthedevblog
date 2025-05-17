@@ -4,6 +4,12 @@ import { BlogGrid } from "@/components/blog-grid"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
+export const metadata = {
+  title: "IvanTheDev Blog",
+  description: "Tips and tricks for modern software engineers",
+}
+
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-yellow-50 dark:from-green-950 dark:via-gray-900 dark:to-yellow-950">
