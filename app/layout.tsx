@@ -6,8 +6,8 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "CodeInsight - Software Engineering Blog",
-  description: "Tips, tricks, and best practices for modern software development",
+  title: "IvanTheDev Blog",
+  description: "Tips and tricks for modern software engineers",
 }
 
 export default function RootLayout({
