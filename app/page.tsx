@@ -3,8 +3,9 @@ import { BlogHeroSlider } from "@/components/blog-hero-slider"
 import { BlogGrid } from "@/components/blog-grid"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { Metadata } from "next"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "IvanTheDev Blog",
   description: "Tips and tricks for modern software engineers",
 }
